@@ -1,0 +1,198 @@
+<!-- {% extends 'base_page.html' %}
+{% block page_title %} Manage staff{% endblock page_title %}
+{% block body_content %}
+
+
+{% load static %}
+{% if staff %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+ 
+
+<!-- JavaScript Bundle with Popper -->
+
+    <!-- Open Content -->
+    <!-- <section class="bg-light">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-5 mt-5">
+                    <div class="card mb-3">
+                        <img class="card-img img-fluid" src={% static "img/product_single_10.jpg" %} alt="Card image cap" id="product-detail">
+                    </div>
+                    <div class="row"> -->
+                        <!--Start Controls-->
+                        <!-- <div class="col-1 align-self-center">
+                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
+                                <i class="text-dark fas fa-chevron-left"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </div> -->
+                        <!--End Controls-->
+                        <!--Start Carousel Wrapper-->
+                        <!-- <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel"> -->
+                            <!--Start Slides-->
+                            <!-- <div class="carousel-inner product-links-wap" role="listbox"> -->
+
+                                <!--First slide-->
+
+                                <!--/.First slide-->
+
+                                <!--Second slide-->
+                                <!-- <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src={% static "img/product_single_04.jpg" %} alt="Product Image 4">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src={% static "img/product_single_05.jpg" %} alt="Product Image 5">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src={% static "img/product_single_06.jpg" %} alt="Product Image 6">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!--/.Second slide-->
+
+                                <!--Third slide-->
+                                <!-- <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src={% static "img/product_single_07.jpg" %} alt="Product Image 7">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src={% static "img/product_single_08.jpg" %} alt="Product Image 8">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src={% static "img/product_single_09.jpg" %} alt="Product Image 9">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!--/.Third slide-->
+                            <!-- </div> -->
+                            <!--End Slides-->
+                        <!-- </div> -->
+                        <!--End Carousel Wrapper-->
+                        <!--Start Controls-->
+                        <!-- <div class="col-1 align-self-center">
+                            <a href="#multi-item-example" role="button" data-bs-slide="next">
+                                <i class="text-dark fas fa-chevron-right"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div> -->
+                        <!--End Controls-->
+                    <!-- </div>
+                </div> -->
+                <!-- col end -->
+                <section>
+                <div class="col-lg-7 mt-5">
+                    <div class="card">
+                        <div>
+                        <img src="img/MasterCard_Logo.svg.png" alt="" style="height: 70px; width: 50px; margin-left: 100px;">
+                        <input type="radio" name="OPTION" id="">
+                        <span>MASTER CARD</span>
+                        </div>
+
+                        <div>
+                        <img src="img/paypal logo.jpg" alt="" style="height: 70px; width: 50px; margin-left: 100px;">
+                        <input type="radio" name="OPTION" id="">
+                        <span>PAYPAL</span>
+                        </div>
+                        <div>
+
+
+                        <img src="img/visa card.jpg" alt="" style="height: 70px; width: 50px; margin-left: 100px;">
+                        <input type="radio" name="OPTION" id="">
+                        <span>VISA CARD</span>
+                        </div>
+                        <!-- <div class="card-body">
+                            <h5>STAFF ID: 
+                                <span>{{staff.user.staff_id}}</span>
+                            </h5> -->
+                </section>
+                            <!-- <h5>FULL NAME:
+                                <span>{{staff.user.first_name staff.user.last_name}}</span>
+                            </h5>
+                            
+                            <h5>USERNAME:
+                                <span>{{staff.user.username}}</span>
+
+                            </h5>
+                            
+                            <h5>EMAIL ADDRESS:
+                                <span>{{staff.email}}</span>
+
+                            </h5>
+                            
+                            <h5>ADDRESS:
+                                <span>{{staff.address}}</span>
+                            </h5>
+                           
+                            <h5>STATE:
+                                <span>{{staff.state}}</span>
+                            </h5>
+                            
+                            <h5>NATIONALITY:
+                                <span>{{staff.user.nationality}}</span>
+                            </h5>
+                            
+                            <h5>MARITAL STATUS:
+                                <span>{{staff.marital_status}}</span>
+                            </h5>
+                            
+                            <h5>POSITION:
+                                <span>{{staff.position}}</span>
+                            </h5>
+                            
+                            <h5>DATE OF DEPLOYMENT:
+                                <span>{{staff.user}}</span>
+                            </h5>
+                            
+                            <h5>MEANS OF IDENTIFICATION:
+                                <span>{{staff.position}}</span>
+                            </h5>
+                            
+                            <h5>POSITION:
+                                <span>{{staff.position}}</span>
+                            </h5>
+                            
+                            <h5>PARTICULARS:
+                                <span>{{staff.position}}</span>
+                            </h5>               -->
+
+<!-- {% endblock %} -->
+
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script> 
+
+
+</body>
+</html>
+<!-- 
+<li>The rules that governs the structure of a command or programming language is called?</li>
+        <input type="radio" name="OPTION" id="">
+        <label for="algorithm"> A. Algorithm</label> <br>
+        <input type="radio" name="OPTION" id=""> -->

@@ -1,0 +1,74 @@
+{% extends 'base_page.html' %}
+{% block page_title %} customer profile staff{% endblock page_title %}
+{% block body_content %}
+
+
+{% load static %}
+
+        <section class="bg-light">
+        <div class="container pb-5">
+            <div class="row">
+                    {% for cust in customer %}
+                <div class="col-lg-5 mt-5">
+                    <div  class="card mb-3">
+                    {% if cust.profile_passport %}
+                    <img class="card-img-fluid" src="{{cust.profile_passport.url}}" alt="card image cap" id="product-detail">
+                    {% else %}
+                    <i class="fas fa-user fa-lg fa-fw me-2  text-dark "></i>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+                <!-- col end -->
+                <div class="col-lg-7 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="h5">STAFF ID:
+                                <span>{{cust.user_id}}</span>
+                            </h5>
+                            <h5 class="h5">FULLNAME:
+                                <span>{{cust.user.first_name}} {{cust.user.last_name}}</span>
+                            </h5>
+
+                            <h5>USERNAME:
+                                <span>{{cust.user.username}}</span>
+                            </h5>
+
+                            <h5>EMAIL ADDRESS: {{cust.user.email}}</h5>
+                            <h5>ADDRESS:
+                                <span>{{cust.address}}</span>
+                            </h5>
+                            <h5>STATE:
+                                <span>{{cust.state}}</span>
+                            </h5>
+                            <h5>NATIONALITY:
+                                <span>{{cust.nationality}}</span>
+                            </h5>
+                             {% if user.is__staff %}
+                             {% else %}
+                             <div class="row pb-3 ">
+                                 <div class="col">
+                                <a href="{% url 'edit_customer' cust.user_id %}">
+                                    <!-- <div class="col d-grid"> -->
+                                        <button type="submit" class="btn btn-success btn-lg">Edit profile</button>
+                                    <!-- </div> -->
+                                </a>
+                             
+                                <a href="{% url 'staff_deactivate' cust.user_id %}">
+                                        <button type="submit" class="btn btn-success btn-lg"> {% if user.is_active  == 1 %}
+                                            Deactivate
+                                            {% else %}
+                                            Activate
+                                            {% endif %}
+                                        </button>            
+                                </a>
+                                </div> 
+                            </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

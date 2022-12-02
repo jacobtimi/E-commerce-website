@@ -1,0 +1,17 @@
+{% extends 'base_page.html' %}
+{% load static %}
+{% block title %} signup {% endblock %}
+
+{% block body_content %}
+<div class="row">
+    <div class="col-6 mx-auto">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="signup">
+                <a href={% url "password_reset" %}>Reset password</a>
+            </form>
+    </div>
+</div>
+
+{% endblock %}
